@@ -26,7 +26,7 @@ export class Login extends React.Component {
   render() {
     return (
       <LoginElement onSubmit={this.handleSubmit}>
-        <input type="text" autoFocus fghfghvalue={this.state.user} onChange={this.handleChange} />
+        <input type="text" autoFocus value={this.state.user} onChange={this.handleChange} />
         <button>Zaloguj</button>
       </LoginElement>
     )
