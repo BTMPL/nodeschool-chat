@@ -6,7 +6,7 @@ import { ChatList } from './components/ChatList';
 import { ChatInput } from './components/ChatInput';
 import { Login } from './components/Login';
 
-import { mock as api } from './utils/api';
+import api from './utils/api';
 
 injectGlobal`
   * {
