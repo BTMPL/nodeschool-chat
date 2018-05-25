@@ -10,7 +10,7 @@ import { mock as api } from './utils/api';
 
 injectGlobal`
   * {
-    box-sizing: broder-box;
+    box-sizing: border-box;
     font-family: Tahoma;
     font-size: 14px;
     line-height: 18px;

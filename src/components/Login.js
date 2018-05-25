@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const LoginElement = styled.div`
+const LoginElement = styled.form`
   text-align: center;
 `
 
@@ -15,17 +15,19 @@ export class Login extends React.Component {
     user: e.target.value
   });
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
     if (this.state.user.replace(/ /ig, '').length !== 0) {
       this.props.onSubmit(this.state.user);
     }
+
+    e.preventDefault();
   }
 
   render() {
     return (
-      <LoginElement>
-        <input type="text" value={this.state.user} onChange={this.handleChange} />
-        <button onClick={this.handleSubmit}>Zaloguj</button>
+      <LoginElement onSubmit={this.handleSubmit}>
+        <input type="text" autoFocus fghfghvalue={this.state.user} onChange={this.handleChange} />
+        <button>Zaloguj</button>
       </LoginElement>
     )
   }
